@@ -40,7 +40,7 @@ defmodule CrudUsersWeb.Router do
     scope "/" do
       pipe_through :browser
 
-      live_dashboard "/dashboard", metrics: CrudUsersWeb.Telemetry
+      live_dashboard "dashboard", metrics: CrudUsersWeb.Telemetry
     end
   end
 

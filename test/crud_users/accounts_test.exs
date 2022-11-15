@@ -35,7 +35,12 @@ defmodule CrudUsers.AccountsTest do
 
     test "update_users/2 with valid data updates the users" do
       users = users_fixture()
-      update_attrs = %{desciption: "some updated desciption", email: "some updated email", name: "some updated name"}
+
+      update_attrs = %{
+        desciption: "some updated desciption",
+        email: "some updated email",
+        name: "some updated name"
+      }
 
       assert {:ok, %Users{} = users} = Accounts.update_users(users, update_attrs)
       assert users.desciption == "some updated desciption"
