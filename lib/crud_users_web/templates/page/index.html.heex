@@ -1,0 +1,8 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to CRUD  %{name} and Elixir", name: "Phoenix" %></h1>
+</section>
+
+<h3>Users
+<li href='/users'><%= link "Users", to: Routes.users(@conn, :home) %></li>
+</h3>
+<h3>Dashboard <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li></h3>
